@@ -70,8 +70,8 @@ public class LessonSource extends HammerHead {
         try {
 		   // System.out.println( "Entering doPost: " );
                    // System.out.println( " - request " + request);
-                  System.out.println( " - principle: " + request.getUserPrincipal()
-             );
+                  // System.out.println( " - principle: " + request.getUserPrincipal()
+            // );
             setCacheHeaders(response, 0);
             WebSession session = (WebSession) request.getSession(true).getAttribute(WebSession.SESSION);
             // FIXME: Too much in this call.
