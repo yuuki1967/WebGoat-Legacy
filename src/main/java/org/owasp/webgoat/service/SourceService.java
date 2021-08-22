@@ -28,6 +28,7 @@
  *
  * For details, please see http://webgoat.github.io
  */
+
 package org.owasp.webgoat.service;
 
 import javax.servlet.http.HttpSession;
