@@ -20,6 +20,7 @@ import org.owasp.webgoat.session.ECSFactory;
 import org.owasp.webgoat.session.WebSession;
 import org.owasp.webgoat.util.WebGoatI18N;
 
+import java.net.URLEncoder; //Y.Endo
 
 /***************************************************************************************************
  * 
@@ -201,7 +202,9 @@ public class SqlStringInjection extends SequentialLessonAdapter
 		ec.addElement(new P().addElement(WebGoatI18N.get("EnterLastName")));
 
 		accountName = s.getParser().getRawParameter(ACCT_NAME, "Your Name");
-		Input input = new Input(Input.TEXT, ACCT_NAME, accountName.toString());
+		//Y.Endo
+//		Input input = new Input(Input.TEXT, ACCT_NAME, accountName.toString());
+		Input input = new Input(Input.TEXT, ACCT_NAME, URLEncoder.encode(accountName.toString()));
 		ec.addElement(input);
 
 		Element b = ECSFactory.makeButton(WebGoatI18N.get("Go!"));
