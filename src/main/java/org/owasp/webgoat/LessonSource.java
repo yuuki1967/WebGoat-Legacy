@@ -109,7 +109,7 @@ public class LessonSource extends HammerHead {
                 thr.printStackTrace();
                 log(request, "Could not write error screen: " + thr.getMessage());
             }
-           // System.out.println( "Leaving doPost: " ); //Y.Endo
+            System.out.println( "Leaving doPost: " ); //Y.Endo
 
         }
     }
