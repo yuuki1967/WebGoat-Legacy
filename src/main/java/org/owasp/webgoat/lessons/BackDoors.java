@@ -22,7 +22,7 @@ import org.apache.ecs.html.TR;
 import org.apache.ecs.html.Table;
 import org.owasp.webgoat.session.DatabaseUtilities;
 import org.owasp.webgoat.session.WebSession;
-
+ 
  
 /***************************************************************************************************
  * 
