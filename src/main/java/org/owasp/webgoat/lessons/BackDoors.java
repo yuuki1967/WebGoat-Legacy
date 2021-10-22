@@ -95,7 +95,7 @@ public class BackDoors extends SequentialLessonAdapter
                 t.addElement(tr);
 
                 tr = new TR();
-               HtmlEncoder en = new HtmlEncoder();
+                HtmlEncoder en = new HtmlEncoder();
                 tr.addElement(new TD(en.encode(rs.getString("userid"))));
                 tr.addElement(new TD(en.encode(rs.getString("password"))));
                 tr.addElement(new TD(en.encode(rs.getString("ssn"))));
