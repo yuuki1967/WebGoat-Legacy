@@ -22,7 +22,8 @@ import org.apache.ecs.html.TR;
 import org.apache.ecs.html.Table;
 import org.owasp.webgoat.session.DatabaseUtilities;
 import org.owasp.webgoat.session.WebSession;
- 
+import org.owasp.webgoat.util.HtmlEncoder;
+
 /***************************************************************************************************
  * 
  * 
@@ -94,20 +95,21 @@ public class BackDoors extends SequentialLessonAdapter
                 t.addElement(tr);
 
                 tr = new TR();
-                tr.addElement(new TD(rs.getString("userid")));
-                tr.addElement(new TD(rs.getString("password")));
-                tr.addElement(new TD(rs.getString("ssn")));
-                tr.addElement(new TD(rs.getString("salary")));
-                tr.addElement(new TD(rs.getString("email")));
+                HtmlEncoder en = new HtmlEncoder();
+                tr.addElement(new TD(en.encode(rs.getString("userid"))));
+                tr.addElement(new TD(en.encode(rs.getString("password"))));
+                tr.addElement(new TD(en.encode(rs.getString("ssn"))));
+                tr.addElement(new TD(en.encode(rs.getString("salary"))));
+                tr.addElement(new TD(en.encode(rs.getString("email"))));
                 t.addElement(tr);
                 while (rs.next())
                 {
                     tr = new TR();
-                    tr.addElement(new TD(rs.getString("userid")));
-                    tr.addElement(new TD(rs.getString("password")));
-                    tr.addElement(new TD(rs.getString("ssn")));
-                    tr.addElement(new TD(rs.getString("salary")));
-                    tr.addElement(new TD(rs.getString("email")));
+                    tr.addElement(new TD(en.encode(rs.getString("userid"))));
+                    tr.addElement(new TD(en.encode(rs.getString("password"))));
+                    tr.addElement(new TD(en.encode(rs.getString("ssn"))));
+                    tr.addElement(new TD(en.encode(rs.getString("salary"))));
+                    tr.addElement(new TD(en.encode(rs.getString("email"))));
                     t.addElement(tr);
                 }
                 ec.addElement(t);
