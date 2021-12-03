@@ -2,5 +2,6 @@ trigger:
 - master 
 steps:
 - task: CmdLine@2
-  - script:'runCxConsole.cmd Scan -v -CxServer http://localhost/ 0ProjectName "CxServer/Team1/WebGoat-Legacy" -cxuser yuuki -cxpassword Checkmarx\!123 -LocationType GIT -LocationUrl https://github.com/yuuki1967/WebGoat-Legacy.git -preset "Checkmarx Default"'
-    workingDirectory: 'C:\\Temp\\CxConsolePlugin-1.1.7\\'
+  inputs:
+    script:'runCxConsole.cmd Scan -v -CxServer http://localhost/ 0ProjectName "CxServer/Team1/WebGoat-Legacy" -cxuser yuuki -cxpassword Checkmarx\!123 -LocationType GIT -LocationUrl https://github.com/yuuki1967/WebGoat-Legacy.git -preset "Checkmarx Default"'
+    workingDirectory: C:\\Temp\\CxConsolePlugin-1.1.7\\
