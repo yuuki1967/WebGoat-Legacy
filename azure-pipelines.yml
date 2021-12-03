@@ -1,6 +1,6 @@
 trigger:
 - master 
-Steps:
+steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
