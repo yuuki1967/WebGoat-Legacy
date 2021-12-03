@@ -1,18 +1,7 @@
 trigger:
 - master 
 steps:
-- task: Maven@3
-  inputs:
-    mavenPomFile: 'pom.xml'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
-    jdkArchitectureOption: 'x64'
-    mavenVersionOption: 'Default'
-    mavenAuthenticateFeed: false
-    effectivePomSkip: false
-    sonarQubeRunAnalysis: false
 - task: CmdLine@2
-  inputs:
-    script: 'C:\\Temp\\CxConsolePlugin-1.1.7\\runCxConsole.cmd Scan -v -CxServer http://localhost/ 0ProjectName "CxServer/Team1/WebGoat-Legacy" -cxuser yuuki -cxpassword Checkmarx\!123 -LocationType GIT -LocationUrl https://github.com/yuuki1967/WebGoat-Legacy.git -preset "Checkmarx Default"'
+  workingDirectory: 'C:\\Temp\\CxConsolePlugin-1.1.7\\'
+  script:
+    'runCxConsole.cmd Scan -v -CxServer http://localhost/ 0ProjectName "CxServer/Team1/WebGoat-Legacy" -cxuser yuuki -cxpassword Checkmarx\!123 -LocationType GIT -LocationUrl https://github.com/yuuki1967/WebGoat-Legacy.git -preset "Checkmarx Default"'
