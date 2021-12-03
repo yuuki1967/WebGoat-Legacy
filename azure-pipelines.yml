@@ -1,7 +1,5 @@
 - task: Maven@3
   inputs:
-- task: Maven@3
-  inputs:
     mavenPomFile: 'pom.xml'
     options: 'clean package'
     publishJUnitResults: true
