@@ -1,6 +1,6 @@
 # Maven
 # Build, test, and deploy with Apache Maven
-task: Maven@3
+-task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml' 
     goals: 'package' # Optional
