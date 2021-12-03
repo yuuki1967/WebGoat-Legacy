@@ -4,10 +4,11 @@ steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
-    options: 'clean package'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    javaHomeOption: '8'
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.8'
+    chitectureOption: 'x64'
     mavenVersionOption: 'Default'
     mavenAuthenticateFeed: false
     effectivePomSkip: false
