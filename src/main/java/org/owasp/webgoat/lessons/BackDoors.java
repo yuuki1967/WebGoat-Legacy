@@ -88,23 +88,22 @@ public class BackDoors extends SequentialLessonAdapter
                 Table t = new Table(0).setCellSpacing(0).setCellPadding(0).setBorder(1);
 		
                 TR tr = new TR();				
-		HtmlEncoder en = new HtmlEncoder();
-                tr.addElement(new TD(en.encode(rs.getString("userid"))));
-                tr.addElement(new TD(en.encode(rs.getString("password"))));
-                tr.addElement(new TD(en.encode(rs.getString("ssn"))));
-                tr.addElement(new TD(en.encode(rs.getString("salary"))));
-                tr.addElement(new TD(en.encode(rs.getString("email"))));
+                tr.addElement(rs.getString("userid"));
+                tr.addElement(rs.getString("password"));
+                tr.addElement(rs.getString("ssn"));
+                tr.addElement(rs.getString("salary"));
+                tr.addElement(rs.getString("email"));
                 tr.addElement(tr);
                 
                 while (rs.next())
                 {
                     tr = new TR();
-                    tr.addElement(new TD(en.encode(rs.getString("userid"))));
-                    tr.addElement(new TD(en.encode(rs.getString("password"))));
-                    tr.addElement(new TD(en.encode(rs.getString("ssn"))));
-                    tr.addElement(new TD(en.encode(rs.getString("salary"))));
-                    tr.addElement(new TD(en.encode(rs.getString("email"))));
-		    tr.addElement(tr);
+                    tr.addElement(rs.getString("userid"));
+                    tr.addElement(rs.getString("password"));
+                    tr.addElement(rs.getString("ssn"));
+                    tr.addElement(rs.getString("salary"));
+                    tr.addElement(rs.getString("email"));
+		    						tr.addElement(tr);
                 }
                 ec.addElement(t);
             }
