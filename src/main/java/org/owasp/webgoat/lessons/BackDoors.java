@@ -88,7 +88,7 @@ public class BackDoors extends SequentialLessonAdapter
                 Table t = new Table(0).setCellSpacing(0).setCellPadding(0).setBorder(1);
 		
                 TR tr = new TR();
-								//Not sanitize.
+								//Not sanitize.1
                 tr.addElement(rs.getString("userid"));
                 tr.addElement(rs.getString("password"));
                 tr.addElement(rs.getString("ssn"));
