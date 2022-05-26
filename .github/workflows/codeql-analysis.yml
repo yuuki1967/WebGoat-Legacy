@@ -54,7 +54,7 @@ jobs:
     - name: Setup Java
       uses: actions/setup-java@v1
       with:
-        java-version: 15
+        java-version: 8
     - run: |
         echo "java version"
         java -version
